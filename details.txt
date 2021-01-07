@@ -1,0 +1,15 @@
+This web app is a student mark sheet manager made using the Django Rest framework as a backend service, React for the front end, and Axios package for HTTP calls. It is using MySql as a database and has CRUD operations.
+In the frontend, it has a leaderboard that shows students in descending order of total marks. Also, it has a search box that accepts Roll no as a search keyword and shows the searched student's details in the table underneath.
+In the backend, API endpoints are there when called returns the JSON format response, which gets rendered.
+Both the apps are independent of each other because of the use of the REST API concept.
+
+API endpoints details-
+BASE_URL = http://127.0.0.1:8000
+1) (BASE_URL + "/api/students/" ) - 
+        GET - shows all students.
+        POST - creates a new student and add to leaderboard automatically.
+        DELETE - clears the database, delete every student.
+2) (BASE_URL + "/api/students/key") - here key is Roll No
+        GET - shows specific student having that Roll no.
+        PUT - update the student info having that Roll no.
+        DELETE - remove the selected student.
